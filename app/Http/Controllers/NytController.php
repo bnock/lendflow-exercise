@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Exceptions\NytApiException;
 use App\Http\Requests\BestSellersRequest;
 use App\NytApi\Services\NytApiService;
+use Symfony\Component\HttpFoundation\Response;
 
 class NytController extends Controller
 {
@@ -26,7 +27,7 @@ class NytController extends Controller
         } catch (NytApiException $e) {
             return response()->json([
                 'error' => $e->getMessage(),
-            ]);
+            ], Response::HTTP_INTERNAL_SERVER_ERROR);
         }
     }
 }
