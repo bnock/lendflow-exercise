@@ -1,12 +1,12 @@
 {
-    "name": "laravel/laravel",
+    "name": "bnock/lendflow-exercise",
     "type": "project",
-    "description": "The skeleton application for the Laravel framework.",
-    "keywords": ["laravel", "framework"],
-    "license": "MIT",
+    "description": "An exercise for Lendflow",
+    "license": "proprietary",
     "require": {
         "php": "^8.2",
         "laravel/framework": "^11.9",
+        "laravel/sanctum": "^4.0",
         "laravel/tinker": "^2.9"
     },
     "require-dev": {
